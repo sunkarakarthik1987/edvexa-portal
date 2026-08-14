@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { TestSession } from './portal/engine';
 import { TestRunner } from './portal/TestRunner';
+import { LoginScreen } from './portal/LoginScreen';
 import { STUDENT } from './portal/data';
 import {
   BankIcon,
@@ -42,9 +43,42 @@ const NAV: Array<{ key: ScreenKey; label: string; Icon: typeof DashboardIcon }> 
   { key: 'messages', label: 'Messages', Icon: MessagesIcon },
 ];
 
+const AUTH_KEY = 'edvexa-portal:auth';
+
+function loadAuth(): boolean {
+  try {
+    return localStorage.getItem(AUTH_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
 export default function App() {
   const [screen, setScreen] = useState<ScreenKey>('dashboard');
   const [session, setSession] = useState<TestSession | null>(null);
+  const [isAuthed, setIsAuthed] = useState<boolean>(loadAuth);
+
+  function handleLogin() {
+    try {
+      localStorage.setItem(AUTH_KEY, 'true');
+    } catch {
+      // Storage unavailable — session just won't persist across a refresh.
+    }
+    setIsAuthed(true);
+  }
+
+  function handleLogout() {
+    try {
+      localStorage.removeItem(AUTH_KEY);
+    } catch {
+      // Nothing to clean up if storage was never available.
+    }
+    setIsAuthed(false);
+  }
+
+  if (!isAuthed) {
+    return <LoginScreen onLogin={handleLogin} />;
+  }
 
   if (session) {
     return <TestRunner session={session} onExit={() => setSession(null)} />;
@@ -79,12 +113,21 @@ export default function App() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2.5 border-t border-ink/10 px-2 pt-4">
-          <Avatar name={STUDENT.name} size={32} />
-          <div className="min-w-0">
-            <p className="truncate text-xs font-medium text-ink">{STUDENT.name}</p>
-            <p className="truncate text-[10px] text-ink-faint">{STUDENT.batch}</p>
+        <div className="border-t border-ink/10 px-2 pt-4">
+          <div className="flex items-center gap-2.5">
+            <Avatar name={STUDENT.name} size={32} />
+            <div className="min-w-0">
+              <p className="truncate text-xs font-medium text-ink">{STUDENT.name}</p>
+              <p className="truncate text-[10px] text-ink-faint">{STUDENT.batch}</p>
+            </div>
           </div>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="mt-3 font-mono text-[10px] uppercase tracking-[0.06em] text-ink-faint underline-offset-2 hover:text-ink hover:underline"
+          >
+            Log out
+          </button>
         </div>
       </nav>
 
