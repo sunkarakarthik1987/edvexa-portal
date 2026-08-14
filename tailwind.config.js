@@ -9,7 +9,7 @@ export default {
         ink: '#e1d816',
         accent: '#9c9723',
         'ink-soft': '#9c9723',
-        'ink-faint': '#605c00',
+        'ink-faint': '#9c9723',
         rule: '#605c00',
         surface: '#3c3a05',
       },
