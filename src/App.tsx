@@ -86,7 +86,7 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen">
-      <nav className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-ink/10 bg-surface/30 px-3 py-5 backdrop-blur-xl md:flex">
+      <nav className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-ink/10 bg-surface px-3 py-5 md:flex">
         <div className="mb-8 px-2">
           <p className="uh-heading font-mono text-sm uppercase tracking-[0.18em]">Edvexa</p>
           <p className="mt-0.5 text-[11px] text-ink-faint">Student portal</p>
@@ -132,7 +132,7 @@ export default function App() {
       </nav>
 
       {/* Mobile nav */}
-      <nav className="fixed bottom-0 left-0 right-0 z-10 flex overflow-x-auto border-t border-ink/10 bg-surface/70 px-2 py-2 backdrop-blur-xl md:hidden">
+      <nav className="fixed bottom-0 left-0 right-0 z-10 flex overflow-x-auto border-t border-ink/10 bg-surface px-2 py-2 md:hidden">
         {NAV.map(({ key, label, Icon }) => (
           <button
             key={key}

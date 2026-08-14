@@ -30,8 +30,8 @@
 
 @layer components {
   .uh-card {
-    @apply rounded-card border border-ink/10 bg-surface/50 shadow-card backdrop-blur-xl transition-all
-      duration-300 hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-lift;
+    @apply rounded-card border border-ink/10 bg-surface shadow-card transition-all duration-300
+      hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-lift;
   }
 
   .uh-eyebrow {
@@ -58,7 +58,7 @@
   }
 
   .uh-btn-ghost {
-    @apply uh-btn border border-ink/20 bg-white/5 text-ink backdrop-blur-sm hover:border-ink/40 hover:bg-ink
+    @apply uh-btn border border-ink/20 bg-transparent text-ink hover:border-ink/40 hover:bg-ink
       hover:text-canvas;
   }
 }

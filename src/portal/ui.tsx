@@ -43,7 +43,7 @@ export function Pill({
         'rounded-full border px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] transition-colors',
         active
           ? 'border-ink bg-ink text-canvas shadow-glow'
-          : 'border-rule bg-white/5 text-ink-soft backdrop-blur-sm hover:border-ink hover:text-ink',
+          : 'border-rule bg-transparent text-ink-soft hover:border-ink hover:text-ink',
       )}
     >
       {children}
