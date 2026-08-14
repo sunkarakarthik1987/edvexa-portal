@@ -88,7 +88,7 @@ export default function App() {
     <div className="flex min-h-screen">
       <nav className="sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-ink/10 bg-surface px-3 py-5 md:flex">
         <div className="mb-8 px-2">
-          <p className="uh-heading font-mono text-sm uppercase tracking-[0.18em]">Edvexa</p>
+          <p className="font-mono text-sm uppercase tracking-[0.18em] text-ink">Edvexa</p>
           <p className="mt-0.5 text-[11px] text-ink-faint">Student portal</p>
         </div>
 
@@ -102,7 +102,7 @@ export default function App() {
                 className={cn(
                   'flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all duration-300',
                   screen === key
-                    ? 'bg-ink text-canvas shadow-glow'
+                    ? 'bg-ink text-canvas'
                     : 'text-ink-soft hover:bg-white/5 hover:text-ink',
                 )}
               >

@@ -17,7 +17,7 @@ export function LoginScreen({ onLogin }: { onLogin: () => void }) {
     <div className="flex min-h-screen items-center justify-center p-4">
       <div className="w-full max-w-sm">
         <div className="uh-card p-8">
-          <p className="uh-heading font-mono text-sm uppercase tracking-[0.18em]">Edvexa</p>
+          <p className="font-mono text-sm uppercase tracking-[0.18em] text-ink">Edvexa</p>
           <p className="mb-6 mt-0.5 text-[11px] text-ink-faint">Student portal</p>
 
           <h1 className="mb-6 text-xl font-semibold tracking-tight text-ink">Sign in</h1>

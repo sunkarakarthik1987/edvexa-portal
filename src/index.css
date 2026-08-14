@@ -11,15 +11,8 @@
   }
 
   body {
-    @apply text-ink font-sans;
+    @apply bg-canvas text-ink font-sans;
     margin: 0;
-    min-height: 100vh;
-    background-color: #151501;
-    background-image:
-      radial-gradient(circle at 12% 18%, rgba(225, 216, 22, 0.16), transparent 40%),
-      radial-gradient(circle at 88% 12%, rgba(156, 151, 35, 0.14), transparent 45%),
-      radial-gradient(circle at 50% 92%, rgba(96, 92, 0, 0.28), transparent 55%);
-    background-attachment: fixed;
   }
 
   :focus-visible {
@@ -38,23 +31,17 @@
     @apply font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint;
   }
 
-  .uh-heading {
-    @apply bg-gradient-to-r from-ink via-accent to-ink bg-[length:200%_auto] bg-clip-text text-transparent
-      animate-shimmer;
-  }
-
   .uh-btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-mono text-xs
       uppercase tracking-[0.08em] transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-40;
   }
 
   .uh-btn-primary {
-    @apply uh-btn bg-ink text-canvas shadow-glow hover:bg-ink-soft hover:shadow-glow-lg hover:-translate-y-0.5;
+    @apply uh-btn bg-ink text-canvas hover:bg-ink-soft;
   }
 
   .uh-btn-accent {
-    @apply uh-btn bg-gradient-to-r from-accent to-ink text-canvas shadow-glow hover:shadow-glow-lg
-      hover:-translate-y-0.5;
+    @apply uh-btn bg-accent text-canvas hover:brightness-110;
   }
 
   .uh-btn-ghost {

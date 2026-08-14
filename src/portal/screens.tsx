@@ -35,7 +35,7 @@ export function DashboardScreen() {
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">{STUDENT.batch}</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">
           Good to see you, {STUDENT.name.split(' ')[0]}.
         </h1>
       </div>
@@ -73,7 +73,7 @@ export function StudyPlanScreen() {
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Study plan</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Build your plan</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Build your plan</h1>
       </div>
       <Card>
         <StudyPlanWizard />
@@ -95,7 +95,7 @@ export function HomeworkScreen() {
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Assignments</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Homework</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Homework</h1>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -142,7 +142,7 @@ export function TestsScreen({ onStart }: { onStart: (s: TestSession) => void }) 
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Practice</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Tests</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Tests</h1>
       </div>
 
       <Card>
@@ -213,7 +213,7 @@ export function QuestionBankScreen({ onStart }: { onStart: (s: TestSession) => v
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Custom practice</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Question bank</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Question bank</h1>
       </div>
 
       <Card>
@@ -285,7 +285,7 @@ export function ResultsScreen() {
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Progress</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Results</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Results</h1>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
@@ -349,7 +349,7 @@ export function MessagesScreen() {
     <div className="space-y-5">
       <div>
         <p className="uh-eyebrow mb-1">Inbox</p>
-        <h1 className="uh-heading text-2xl font-semibold tracking-tight">Messages</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">Messages</h1>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">

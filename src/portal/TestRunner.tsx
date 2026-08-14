@@ -57,7 +57,7 @@ export function TestRunner({ session, onExit }: { session: TestSession; onExit: 
     return (
       <div className="mx-auto max-w-xl animate-fade-up py-10 text-center">
         <p className="uh-eyebrow mb-3">{session.mode} test</p>
-        <h1 className="mb-4 uh-heading text-2xl font-semibold tracking-tight">{session.title}</h1>
+        <h1 className="mb-4 text-2xl font-semibold tracking-tight text-ink">{session.title}</h1>
         <p className="mb-8 text-sm leading-relaxed text-ink-soft">
           {questions.length} questions across {session.modules.length}{' '}
           {session.modules.length === 1 ? 'module' : 'modules'}.{' '}

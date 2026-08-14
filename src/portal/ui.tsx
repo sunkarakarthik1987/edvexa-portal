@@ -42,7 +42,7 @@ export function Pill({
       className={cn(
         'rounded-full border px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] transition-colors',
         active
-          ? 'border-ink bg-ink text-canvas shadow-glow'
+          ? 'border-ink bg-ink text-canvas'
           : 'border-rule bg-transparent text-ink-soft hover:border-ink hover:text-ink',
       )}
     >
@@ -93,7 +93,7 @@ export function Progress({ value, label }: { value: number; label?: string }) {
         className="h-1.5 w-full overflow-hidden rounded-full bg-rule/60"
       >
         <div
-          className="h-full rounded-full bg-gradient-to-r from-accent to-ink shadow-glow transition-[width] duration-500"
+          className="h-full rounded-full bg-ink transition-[width] duration-500"
           style={{ width: clamped + '%' }}
         />
       </div>
